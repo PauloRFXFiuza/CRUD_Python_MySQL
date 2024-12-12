@@ -14,17 +14,18 @@ DELETE
 #Step 3- Open MySQL Workbench 
 #Step 4- Create Database and Table
 #Step 5- Create Connection
+#Step 6- Create Cursor
 
-'''
-import mysql.connector as ms
 
-connectionMySQL = ms(
+import mysql.connector
+
+connectionMySQL = mysql.connector(
     host='localhost',
     user='root',
-    password='123456',
+    password='@Prff03011991',
     database='database',
 )
-'''
+
 
 
 
