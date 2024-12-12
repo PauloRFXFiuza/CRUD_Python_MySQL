@@ -19,7 +19,7 @@ DELETE
 
 import mysql.connector
 
-connectionMySQL = mysql.connector(
+connectionMySQL = mysql.connector.connect(
     host='localhost',
     user='root',
     password='@Prff03011991',
