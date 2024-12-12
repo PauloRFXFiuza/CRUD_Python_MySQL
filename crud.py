@@ -26,7 +26,11 @@ connectionMySQL = mysql.connector(
     database='database',
 )
 
+cursor = connectionMySQL.cursor()
 
+
+cursor.close()
+connectionMySQL.close()
 
 
 
