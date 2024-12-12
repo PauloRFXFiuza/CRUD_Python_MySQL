@@ -16,6 +16,13 @@ DELETE
 #Step 5- Create Connection
 #Step 6- Create Cursor
 
+from datetime import date
+from datetime import datetime
+
+data_atual = date.today()
+horario = datetime.now().time()
+print(f"Now {horario} .Today is {data_atual}.")
+
 '''
 import mysql.connector
 
@@ -33,12 +40,29 @@ cursor.close()
 connectionMySQL.close()
 '''
 
-from datetime import date
-from datetime import datetime
+import mysql.connector
 
-data_atual = date.today()
-horario = datetime.now().time()
-print(f"Now {horario} .Today is {data_atual}.")
+# Conexão com o banco de dados
+try:
+    connection = mysql.connector.connect(
+        host="localhost",        # Endereço do servidor (ou IP)
+        user="root",      # Usuário do banco de dados
+        password="@Prff03011991",    # Senha do usuário
+        database="database" # Nome do banco de dados
+    )
+
+    if connection.is_connected():
+        print("Conexão bem-sucedida!")
+        print(f"Servidor: {connection.get_server_info()}")
+
+except mysql.connector.Error as e:
+    print(f"Erro ao conectar ao MySQL: {e}")
+
+finally:
+    if connection.is_connected():
+        connection.close()
+        print("Conexão encerrada.")
+
 
 
 
