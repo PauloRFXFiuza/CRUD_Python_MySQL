@@ -15,8 +15,16 @@ DELETE
 #Step 4- Create Database and Table
 #Step 5- Create Connection
 
-connectionMySQL = 1 
+'''
+import mysql.connector as ms
 
+connectionMySQL = ms(
+    host='localhost',
+    user='root',
+    password='123456',
+    database='database',
+)
+'''
 
 
 
