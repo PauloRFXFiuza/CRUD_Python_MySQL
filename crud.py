@@ -16,7 +16,7 @@ DELETE
 #Step 5- Create Connection
 #Step 6- Create Cursor
 
-
+'''
 import mysql.connector
 
 connectionMySQL = mysql.connector.connect(
@@ -31,9 +31,14 @@ cursor = connectionMySQL.cursor()
 
 cursor.close()
 connectionMySQL.close()
+'''
 
+from datetime import date
+from datetime import datetime
 
-
+data_atual = date.today()
+horario = datetime.now().time()
+print(f"Now {horario} .Today is {data_atual}.")
 
 
 
