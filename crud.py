@@ -9,7 +9,7 @@ DELETE
 
 '''
 #Step 1- Install MySQl Driver - pip install mysql-connector-python
-
+#Step 2- Use import mysql.connector
 
 
 
